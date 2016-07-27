@@ -41,15 +41,15 @@ class Pokeslack:
             return
 
         from_lure = ', from a lure' if pokemon.get('from_lure', False) else ''
-        miles_away = '{:.3f}'.format(distance)
+        miles_away = '{:.3f}'.format(distance*1609)
 
         pokedex_url = 'http://www.pokemon.com/de/pokedex/%s' % pokemon['pokemon_id']
         map_url = 'http://maps.google.com?saddr=%s,%s&daddr=%s,%s&directionsmode=walking' % (position[0], position[1], pokemon['latitude'], pokemon['longitude'])
         min_remaining = int(expires_in.total_seconds() / 60)
         time_remaining = '%s%ss' % ('%dm' % min_remaining if min_remaining > 0 else '', expires_in.seconds - 60 * min_remaining)
         stars = ''.join([':star:' for x in xrange(rarity)])
-        m_away = miles_away * 1609
-        message = '<%s|%s> %s gefunden <%s|%s meter entfernt> verschwindet in %s%s' % (pokedex_url, pokemon['name'], stars, map_url, m_away, time_remaining, from_lure)
+        
+        message = '<%s|%s> %s gefunden <%s|%s meter entfernt> verschwindet in %s%s' % (pokedex_url, pokemon['name'], stars, map_url, miles_away, time_remaining, from_lure)
         # bold message if rarity > 4
         if rarity >= 4:
             message = '*%s*' % message
