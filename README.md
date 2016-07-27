@@ -1,5 +1,8 @@
 # PokéSlack
-Get Slack messages posted to a #pokealert channel for rare Pokemon close to you. Get walking directions from your search position and the time it expires. 
+This is a fork of https://github.com/timwah/pokeslack
+its basically the same i just added German Pokemon names and slack output
+
+Get German Slack messages posted to a #pokealert channel for rare Pokemon close to you. Get walking directions from your search position and the time it expires. 
 
 ![PokeSlack](alert.png?raw=true)
 
