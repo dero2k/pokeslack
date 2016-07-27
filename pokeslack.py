@@ -41,7 +41,7 @@ class Pokeslack:
             return
 
         from_lure = ', from a lure' if pokemon.get('from_lure', False) else ''
-        miles_away = '{:d}'.format(distance*1609)
+        miles_away = '{:.0f}'.format(distance*1609)
 
         pokedex_url = 'http://www.pokemon.com/de/pokedex/%s' % pokemon['pokemon_id']
         map_url = 'http://maps.google.com?saddr=%s,%s&daddr=%s,%s&directionsmode=walking' % (position[0], position[1], pokemon['latitude'], pokemon['longitude'])
