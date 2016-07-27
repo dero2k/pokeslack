@@ -1,7 +1,7 @@
 # PokéSlack
 Get Slack messages posted to a #pokealert channel for rare Pokemon close to you. Get walking directions from your search position and the time it expires. 
 
-![PokeSlack](cover.png?raw=true)
+![PokeSlack](alert.png?raw=true)
 
 ## Create your [Slack Webhook](https://api.slack.com/incoming-webhooks)
 Create a new webhook for a channel named #pokealerts  
